@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="container__left">
+    <header class="header">
+      <div class="header__text">
+        Streamy
+      </div>
+    </header>
+    
+    <form class="search" (ngSubmit)="onSearch()" [formGroup]="searchForm">
+        <input type="text" formControlName="searchInput" class="search__input" placeholder="Search Hashtags">
+    </form>
+    
+    <div *ngIf="searchText" class="active-search">
+      # {{ searchText }}
+    </div>
+    
+    <main class="results">
+      <div class="results__per-minute">
+        Tweets Per Minute: 
+        <span class="results__per-minute-value">
+          {{ tweetsData.tweetsPerMinute }}
+        </span>
+      </div>
+      <div class="results__per-country">
+        <div *ngFor="let item of tweetsData.countries| keyvalue" class="results__per-country-value">
+          {{ item.key }} - {{ item.value}}
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="container__right">
+    <header class="header">
+      <div class="header__text">
+        Live
+      </div>
+    </header>
+    <cdk-virtual-scroll-viewport itemSize="50" class="livestream">
+      <div *cdkVirtualFor="let message of tweetsData.messages" class="livestream__tweet">
+        {{ message.text }}
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>

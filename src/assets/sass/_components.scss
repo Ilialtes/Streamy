@@ -1,0 +1,105 @@
+.header {
+    height: 6rem;
+    background-color: $color-white;
+    box-shadow: 0 1rem 3rem rgba($color-black, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-weight: 700;
+        color: $color-primary;
+        text-align: center;
+        transition: letter-spacing .2s ease-in-out;
+        backface-visibility: hidden;
+        &:hover {
+            letter-spacing: 1.4rem;
+        }
+    }
+}
+
+.search {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+
+    &__input {
+        font-size: 3rem;
+        font-family: inherit;
+        border: none;
+        outline: none;
+        padding: 1rem 3rem;
+        border-radius: 10rem;
+        transform: scaleX(0.9);
+        transition: transform .2s ease-in-out;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.05);
+        &:focus {
+            transform: scaleX(1);
+        }
+    }
+
+}
+
+.active-search {
+    font-size: 4rem;
+    color: $color-white;
+    display: block;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+}
+
+.results {
+
+    &__per-minute {
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2.4rem;
+        color: $color-white;
+    }
+
+    &__per-minute-value {
+        font-weight: 900;
+        font-size: 3.5rem;
+    }
+
+    &__per-country {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__per-country-value {
+        font-weight: 900;
+        font-size: 2.2rem;
+        color: $color-white;
+        background-color: $color-primary-dark;
+        margin: .5rem;
+        padding: .5rem 2rem;
+        text-transform: uppercase;
+        transition: all .4s;
+    }
+}
+
+.livestream {
+
+    flex: 1;
+
+    &__tweet {
+        display: block;
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        margin: 1rem;
+        background-color: $color-primary;
+    }
+}

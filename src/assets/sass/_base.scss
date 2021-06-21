@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Roboto;
+}
+
+body {
+    background-image: linear-gradient(
+        to bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .9),
+    );
+    height: 100vh;
+}

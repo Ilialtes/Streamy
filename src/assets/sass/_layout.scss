@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    &__left {
+        flex: 1;
+    }
+
+    &__right {
+        width: 300px;
+        background-color: $color-white;
+        height: 100vh;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+    }
+}
